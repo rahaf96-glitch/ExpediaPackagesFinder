@@ -2,7 +2,7 @@ document.getElementById('searchBtn').addEventListener('click', function() {
     let origin = document.getElementById('originCity').value;
     let destination = document.getElementById('destinationCity').value;
 
-    fetch(`http://localhost:8080/api/packages?origin=${origin}&destination=${destination}`)
+    fetch(`https://expediapackagesfinder-4.onrender.com/api/packages?origin=${origin}&destination=${destination}`)
         .then(response => response.json())
         .then(data => {
             let resultDiv = document.getElementById('package-cards');
